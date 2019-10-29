@@ -67,6 +67,7 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -80,6 +81,7 @@
       <DebugInformationFormat />
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -92,6 +94,9 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Model1\TreeItem.cpp" />
     <ClCompile Include="Model1\TreeModel.cpp" />
+    <ClCompile Include="Model2\Configuration.cpp" />
+    <ClCompile Include="Model2\Parameter.cpp" />
+    <ClCompile Include="Model2\ValueVisitor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="ConfigDialog.h" />
@@ -104,6 +109,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Model1\TreeItem.h" />
+    <ClInclude Include="Model2\Configuration.h" />
+    <ClInclude Include="Model2\Parameter.h" />
+    <ClInclude Include="Model2\ValueVisitor.h" />
     <QtMoc Include="Model1\TreeModel.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

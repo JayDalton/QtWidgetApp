@@ -1,6 +1,6 @@
 #include "ConfigDialog.h"
 
-#include "Model/TreeModel.h"
+#include "Model1/TreeModel.h"
 
 #include <QtWidgets/QApplication>
 

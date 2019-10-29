@@ -37,6 +37,15 @@
     <ClCompile Include="Model1\TreeModel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Model2\Configuration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Model2\Parameter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Model2\ValueVisitor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="ConfigDialog.h">
@@ -58,6 +67,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Model1\TreeItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Model2\Configuration.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Model2\Parameter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Model2\ValueVisitor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
