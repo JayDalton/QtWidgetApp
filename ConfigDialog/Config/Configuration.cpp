@@ -164,12 +164,12 @@
 
 void Configuration::registerBaseParameter(const BaseParameter& parameter)
 {
-   m_paramMap.insert_or_assign(parameter.m_ident, parameter);
+   //m_paramMap.insert_or_assign(parameter.m_ident, parameter);
 }
 
 void Configuration::registerListParameter(const ListParameter& parameter)
 {
-   m_paramMap.insert_or_assign(parameter.m_ident, parameter);
+   //m_paramMap.insert_or_assign(parameter.m_ident, parameter);
 }
 
 const ParameterVariant& Configuration::getParameter(const std::string& ident) const
@@ -207,7 +207,7 @@ const ListParameter& Configuration::getListParameter(const std::string& ident) c
    return std::get<ListParameter>(param);
 }
 
-bool Configuration::setParameter(const std::string& ident, BaseParameter::ValueType value)
+bool Configuration::setParameter(const std::string& ident, BaseValue value)
 {
    //auto found = std::find_if(m_params.begin(), m_params.end(), 
    //   [&ident](const auto& param) { return param.m_ident == ident; }
@@ -246,14 +246,16 @@ bool Configuration::setParameter(const std::string& ident, const std::string& va
 
 const std::string& Configuration::getStringParameter(const std::string& ident) const
 {
-   const BaseParameter& param = getBaseParameter(ident);
-   if (std::holds_alternative<std::string>(param.m_current))
-   {
-      return std::get<std::string>(param.m_current);
-   }
+   //const BaseParameter& param = getBaseParameter(ident);
+   //if (std::holds_alternative<std::string>(param.m_current))
+   //{
+   //   return std::get<std::string>(param.m_current);
+   //}
 
-   assert(false);
-   return std::get<std::string>(param.m_current);
+   //assert(false);
+   //return std::get<std::string>(param.m_current);
+
+   return {};
 }
 
 

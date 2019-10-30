@@ -94,9 +94,11 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Model1\TreeItem.cpp" />
     <ClCompile Include="Model1\TreeModel.cpp" />
-    <ClCompile Include="Model2\Configuration.cpp" />
-    <ClCompile Include="Model2\Parameter.cpp" />
-    <ClCompile Include="Model2\ValueVisitor.cpp" />
+    <ClCompile Include="Config\Configuration.cpp" />
+    <ClCompile Include="Config\Parameter.cpp" />
+    <ClCompile Include="Config\ValueVisitor.cpp" />
+    <ClCompile Include="Model2\ValueTreeItem.cpp" />
+    <ClCompile Include="Model2\ValueTreeModel.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="ConfigDialog.h" />
@@ -109,9 +111,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Model1\TreeItem.h" />
-    <ClInclude Include="Model2\Configuration.h" />
-    <ClInclude Include="Model2\Parameter.h" />
-    <ClInclude Include="Model2\ValueVisitor.h" />
+    <ClInclude Include="Config\Configuration.h" />
+    <ClInclude Include="Config\Parameter.h" />
+    <ClInclude Include="Config\ValueVisitor.h" />
+    <ClInclude Include="Model2\ValueTreeItem.h" />
+    <QtMoc Include="Model2\ValueTreeModel.h" />
     <QtMoc Include="Model1\TreeModel.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

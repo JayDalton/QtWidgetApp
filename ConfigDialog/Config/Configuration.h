@@ -20,7 +20,7 @@ protected:
    const BaseParameter& getBaseParameter(const std::string& ident) const;
    const ListParameter& getListParameter(const std::string& ident) const;
 
-   bool setParameter(const std::string& ident, BaseParameter::ValueType value);
+   bool setParameter(const std::string& ident, BaseValue value);
    bool setParameter(const std::string& ident, const std::string& value);
 
    const std::string& getStringParameter(const std::string& ident) const;

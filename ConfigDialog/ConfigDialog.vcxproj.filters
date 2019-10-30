@@ -37,13 +37,19 @@
     <ClCompile Include="Model1\TreeModel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Model2\Configuration.cpp">
+    <ClCompile Include="Config\Configuration.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Model2\Parameter.cpp">
+    <ClCompile Include="Config\Parameter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Model2\ValueVisitor.cpp">
+    <ClCompile Include="Config\ValueVisitor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Model2\ValueTreeItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Model2\ValueTreeModel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -52,6 +58,9 @@
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="Model1\TreeModel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Model2\ValueTreeModel.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
@@ -69,13 +78,16 @@
     <ClInclude Include="Model1\TreeItem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Model2\Configuration.h">
+    <ClInclude Include="Config\Configuration.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Model2\Parameter.h">
+    <ClInclude Include="Config\Parameter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Model2\ValueVisitor.h">
+    <ClInclude Include="Config\ValueVisitor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Model2\ValueTreeItem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
