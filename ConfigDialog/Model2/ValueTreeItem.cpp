@@ -28,6 +28,11 @@ ValueTreeItem& ValueTreeItem::child(int row)
    return m->childs.at(row);
 }
 
+ValueTreeItem& ValueTreeItem::child(int row) const
+{
+   return m->childs.at(row);
+}
+
 int ValueTreeItem::childCount() const
 {
    return m->childs.size();

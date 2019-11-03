@@ -17,6 +17,8 @@ struct ValueTreeItem
    void appendChild(ValueTreeItem item);
 
    ValueTreeItem& child(int row);
+   ValueTreeItem& child(int row) const;
+
    int childCount() const;
    int columnCount() const;
    const ParameterVariant& data(int column) const;

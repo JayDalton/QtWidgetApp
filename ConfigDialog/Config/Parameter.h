@@ -7,6 +7,8 @@
 #include <filesystem>
 #include <unordered_map>
 
+#include "ValueVisitor.h"
+
 namespace fs = std::filesystem;
 
 class Writer;
@@ -33,8 +35,8 @@ struct BaseParameter /*: public ParameterBase*/
    BaseParameter();
    ~BaseParameter();
 
-   void setValue(BaseValue value);
    BaseValue getValue() const;
+   void setValue(BaseValue value);
 
    void Serialize(Writer& writer) const;
 
@@ -48,6 +50,9 @@ struct ListParameter /*: public ParameterBase*/
 {
    ListParameter();
    ~ListParameter();
+
+   BaseValue getValue() const;
+   void setValue(BaseValue value);
 
    void Serialize(Writer& writer) const;
 
@@ -66,6 +71,11 @@ struct ConfigParameter
 
 using ParameterVariant = std::variant<BaseParameter, ListParameter>;
 using ParameterMapping = std::unordered_map<std::string, ParameterVariant>;
+
+Visitor GetCurrentVisitor{
+	[](const BaseParameter& p) { return p.getValue(); },
+	[](const ListParameter& p) { return p.getValue(); },
+};
 
 
 // Codepage: UTF-8 (ÜüÖöÄäẞß)

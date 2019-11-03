@@ -8,6 +8,16 @@ BaseParameter::BaseParameter()
 
 BaseParameter::~BaseParameter() = default;
 
+BaseValue BaseParameter::getValue() const
+{
+   return m->m_current;
+}
+
+void BaseParameter::setValue(BaseValue value)
+{
+   m->m_current = value;
+}
+
 
 
 void BaseParameter::Serialize(Writer& writer) const
@@ -42,6 +52,15 @@ ListParameter::ListParameter()
 }
 
 ListParameter::~ListParameter() = default;
+
+BaseValue ListParameter::getValue() const
+{
+   return {};// m->current;
+}
+
+void ListParameter::setValue(BaseValue value)
+{
+}
 
 void ListParameter::Serialize(Writer& writer) const
 {
