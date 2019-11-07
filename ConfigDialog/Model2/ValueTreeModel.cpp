@@ -48,7 +48,9 @@ QVariant ValueTreeModel::headerData(int section, Qt::Orientation orientation,
 {
    if (orientation == Qt::Horizontal && role == Qt::DisplayRole)
    {
+      //auto current = m_rootItem.data(section).getValue();
       auto value = std::visit(GetCurrentVisitor, m_rootItem.data(section));
+      value;
       //std::visit()
    }
 

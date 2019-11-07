@@ -11,17 +11,46 @@
 
 namespace fs = std::filesystem;
 
-class Writer;
+#pragma region BinaryTree
 
-using BaseValue = std::variant<
-   bool, signed, double, std::string
->;
+template <typename LeafData>
+struct BinaryTree;
+
+template <typename LeafData>
+struct BinaryTreeBranch
+{
+   std::shared_ptr<BinaryTree<LeafData>> left;
+   std::shared_ptr<BinaryTree<LeafData>> right;
+};
+
+template <typename LeafData>
+struct BinaryTree
+{
+   using Value = std::variant<LeafData, BinaryTreeBranch<LeafData>>;
+   Value value;
+};
+
+#pragma endregion
+
+struct BaseValue
+{
+   using Value = std::variant<bool, signed, double, std::string, std::vector<BaseValue>>;
+   Value value;
+};
+
+
+//using BaseValue = std::variant<
+//   bool, signed, double, std::string, std::vector<BaseValue>
+//>;
+
+
 
 struct ParameterBase
 {
    std::string m_ident;
    std::string m_label;
    BaseValue m_current;
+
    BaseValue m_maximum;
    BaseValue m_minimum;
    BaseValue m_default;
@@ -29,6 +58,8 @@ struct ParameterBase
 };
 
 using ParameterImpl = std::unique_ptr<ParameterBase>;
+
+class Writer;
 
 struct BaseParameter /*: public ParameterBase*/
 {
