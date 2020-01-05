@@ -4,6 +4,11 @@
 
 #include "../Config/Configuration.h"
 
+struct VariantValue
+{
+
+};
+
 struct ValueTreeItem
 {
    //using Item = std::unique_ptr<ValueTreeItem>;
