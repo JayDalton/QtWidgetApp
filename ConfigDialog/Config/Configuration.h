@@ -46,10 +46,10 @@ struct ApplicationConfig : public Configuration
    void setFolderFilelist(const std::vector<std::string>& list);
 
 private:
-   static constexpr char* DEFAULT_MATRIX_IMPORT{"matrixImport"};
-   static constexpr char* DEFAULT_MATRIX_FOLDER{"matrixFolder"};
-   static constexpr char* DEFAULT_LOGFILE_FOLDER{"loggingFolder"};
-   static constexpr char* MATRIX_FOLDER_FILELIST{"folderFileFist"};
+   static constexpr const char* DEFAULT_MATRIX_IMPORT{"matrixImport"};
+   static constexpr const char* DEFAULT_MATRIX_FOLDER{"matrixFolder"};
+   static constexpr const char* DEFAULT_LOGFILE_FOLDER{"loggingFolder"};
+   static constexpr const char* MATRIX_FOLDER_FILELIST{"folderFileFist"};
 };
 
 
